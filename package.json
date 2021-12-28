@@ -2,13 +2,15 @@
   "name": "innovare-ism",
   "version": "1.0.0",
   "description": "",
-  "main": "seed.js",
+  "main": "server/index.js",
+ 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node server/index.js",
+    "seed": "node seed/index.js",
     "build": "webpack",
     "build:dev": "npm run build -- --watch --mode=development",
-    "start:dev": "npm run build:dev & nodemon server.js --ignore public/ --ignore client/"
+    "start:dev": "npm run build:dev & nodemon server/index.js --ignore public/ --ignore client/"
   },
   "author": "Ian Sturges Milliken",
   "license": "ISC",
