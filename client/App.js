@@ -1,17 +1,44 @@
-import React from "react";
-// import Header from "./Header";
-// import Navbar from "./Navbar";
-// import Routes from "./Routes";
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Routes from './Routes';
+import { getMilestones } from './store/milestones';
 
-const App = () => {
-  return (
-    <div id='container'>
-      <h1>Hello World from React!</h1>
-      {/* <Header />
-      <Navbar />
-      <Routes /> */}
-    </div>
-  );
+class App extends Component {
+    componentDidMount() {
+        this.props.getMilestones();
+    }
+
+    render() { 
+        return (
+            <div id = 'main-app'>
+                <div id='side'>
+                    <Navbar />
+                </div>
+                <div id='main'>
+                    <Header />
+                    <Routes />
+                </div>
+            </div>
+        );
+    };
+}
+
+const mapState = (state) => {
+    return {
+        milestones: state.milestones,
+        // users:
+    };
 };
 
-export default App;
+const mapDispatch = (dispatch) => {
+    return {
+        getMilestones: () => dispatch(getMilestones()),
+
+    };
+};
+
+
+export default withRouter(connect(mapState, mapDispatch)(App));
