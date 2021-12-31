@@ -5,10 +5,10 @@ const seedMilestones = require('./seed-milestone-data.json');
 async function seed() {
     await db.sync({force: true});
     console.log('db synced!');
-    const users = await Promise.all(
+    await Promise.all(
         seedUsers.map((user) => User.create(user))
     );
-    const milestones = await Promise.all(
+    await Promise.all(
         seedMilestones.map((milestone) => Milestone.create(milestone))
     );
     console.log('Seeded successfully');

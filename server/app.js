@@ -10,7 +10,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 //api routes
-//app.use('/api', require('./api'));
+app.use('/api', require('./api'));
 
 //main get route
 app.get('/', (req, res)=> res.sendFile(path.join(__dirname, '..', 'public/index.html')));
