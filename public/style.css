@@ -105,3 +105,54 @@ h5 {
     padding: 24px;
 }
 
+/* Dashboard */
+
+#dashboard-width {
+    display: flex;
+    align-items: center;
+}
+#carousel-container {
+    border: 1px solid #CEDCE3;
+    border-radius: 5px;
+    height: 100px;
+    flex-grow: 1;
+    display: flex;
+    margin-right: 24px;
+}
+
+#carousel-title {
+    border-right: 1px solid #CEDCE3;
+    width: 153px;
+    padding-left: 24px;
+    padding-top: 26px;
+}
+
+.carousel-provider {
+    display: flex;
+    height: 100px;
+    flex-grow: 1;
+}
+.slider {
+    flex-grow: 1;
+    height: 100px;
+}
+.slide {
+    width: 100px;
+    height: 100px;
+    border: 2px solid green;
+}
+
+/* Subheading Medium */
+.subheading-medium {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: #00131A;
+
+}
+
+.plus:hover {
+    cursor: pointer;
+}
