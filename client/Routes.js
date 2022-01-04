@@ -21,6 +21,7 @@ const Routes = () => {
    
         </div>
     );
-  };
-  
-  export default Routes;
+};
+
+export default Routes;
+

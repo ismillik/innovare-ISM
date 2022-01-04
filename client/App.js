@@ -11,7 +11,7 @@ class App extends Component {
         this.props.getMilestones();
     }
 
-    render() { 
+    render() {
         return (
             <div id = 'main-app'>
                 <div id='side'>

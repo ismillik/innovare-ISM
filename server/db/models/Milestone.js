@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../db');
-const { DataTypes: { STRING, UUID, UUIDV4, DATEONLY, BOOLEAN, TEXT } } = Sequelize;
+const { DataTypes: { STRING, UUID, UUIDV4, BOOLEAN, ENUM, TEXT } } = Sequelize;
 
 const Milestone = db.define('milestone', {
     id: {
@@ -16,16 +16,24 @@ const Milestone = db.define('milestone', {
         }
     },
     dueDate: {
-        type: DATEONLY
-        // allowNull: false,
-        // validate: {
-        //     notEmpty: true
-        // }
+        type: STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true
+        }
     },
     overDue: {
         type: BOOLEAN,
         allowNull: false,
         defaultValue: false
+    },
+    status: {
+        type: ENUM('In progress', 'Complete'),
+        defaultValue: 'In progress',
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        },
     },
     details: {
         type: TEXT

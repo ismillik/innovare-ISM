@@ -156,3 +156,57 @@ h5 {
 .plus:hover {
     cursor: pointer;
 }
+
+/* Carousel Items */
+.carousel-item {
+    display: flex;
+    padding: 21px;
+}
+
+.calendar {
+    background: white;
+    width: 52px;
+    height: 52px;
+    margin-right: 21px;
+    border: 1px solid #d2e7f2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.top {
+    position: relative;
+    left: 0%;
+    right: 0%;
+    top: 9%;
+    z-index: 0;
+}
+.month {
+    position: relative;
+    top: -21%;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 120%;
+    text-align: left;
+    color: white;
+    z-index: 1;
+}
+.date {
+    position: relative;
+    height: 29px;
+    top: -15%;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: left;
+    color: #00131A;
+    z-index: 1;
+}
