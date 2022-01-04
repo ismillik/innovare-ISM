@@ -23,11 +23,6 @@ export default class extends React.Component {
                             </Slide>
                         )
                     })}
-     
-                    {/* <Slide className='slide' index={0}>I am the first Slide.</Slide>
-                    <Slide className='slide' index={1}>I am the second Slide.</Slide>
-                    <Slide className='slide' index={2}>I am the third Slide.</Slide>
-                    <Slide className='slide' index={3}>I am the fourth Slide.</Slide> */}
                 </Slider>
                 <ButtonNext>Next</ButtonNext>
             </CarouselProvider>

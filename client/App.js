@@ -5,10 +5,12 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Routes from './Routes';
 import { getMilestones } from './store/milestones';
+import { getUsers } from './store/users';
 
 class App extends Component {
     componentDidMount() {
         this.props.getMilestones();
+        this.props.getUsers();
     }
 
     render() {
@@ -29,13 +31,14 @@ class App extends Component {
 const mapState = (state) => {
     return {
         milestones: state.milestones,
-        // users:
+        users: state.users,
     };
 };
 
 const mapDispatch = (dispatch) => {
     return {
         getMilestones: () => dispatch(getMilestones()),
+        getUsers: () => dispatch(getUsers()),
 
     };
 };

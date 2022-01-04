@@ -13,26 +13,16 @@ router.get('/', async (req, res, next) => {
     };
 });
 
-//Get single milestone by id
-// router.get('/:id', async (req, res, next) => {
-//     try {
-//         res.send(await Milestone.findByPk(req.params.id))
-//     }
-//     catch(err) {
-//         next(err);
-//     };
-// });
-
-//Create milestone
-// router.post('/', async (req, res, next) => {
-//     try {
-//         const milestone = await Milestone.create(req.body);
-//         res.status(201).send(milestone);
-//     }
-//     catch(err) {
-//         next(err);
-//     };
-// });
+//create milestone
+router.post('/', async (req, res, next) => {
+    try {
+        const milestone = await Milestone.create(req.body);
+        res.status(201).send(milestone);
+    }
+    catch(err) {
+        next(err);
+    };
+});
 
 //Delete milestone
 // router.delete("/:id", async (req, res, next) => {

@@ -13,7 +13,7 @@ const Dashboard = (props) => {
                   <div id='carousel-container'>
                       <div id= 'carousel-title'>
                           <h4 className='subheading-medium'>Milestones</h4>
-                          <Link to = '/milestones'>View all</Link>
+                          <Link className='view-all' to= '/milestones'>View all</Link>
                       </div>
                       <Carousel milestones= {milestones}/>
                   </div>

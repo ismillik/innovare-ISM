@@ -26,7 +26,7 @@ export const createMilestone = (milestone, history) => {
     return async (dispatch) => {
         const { data: created } = await axios.post('/api/milestones', milestone);
         dispatch(_createMilestone(created));
-        // history.push('/milestones');
+        history.push('/milestones');
     };
 };
 

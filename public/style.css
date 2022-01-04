@@ -139,10 +139,13 @@ h5 {
 .slide {
     width: 100px;
     height: 100px;
-    border: 2px solid green;
 }
 
-/* Subheading Medium */
+.plus:hover {
+    cursor: pointer;
+}
+
+/* Carousel Title Text */
 .subheading-medium {
     font-family: Quicksand;
     font-style: normal;
@@ -153,14 +156,28 @@ h5 {
 
 }
 
-.plus:hover {
-    cursor: pointer;
+.view-all {
+    font-family: Quicksand;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #005684;
 }
+
 
 /* Carousel Items */
 .carousel-item {
     display: flex;
     padding: 21px;
+}
+
+.alert {
+    position: relative;
+    top: -64px;
+    right: -39px;
+    z-index: 1;
 }
 
 .calendar {
@@ -175,7 +192,11 @@ h5 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 0;
+}
 
+.calendar:hover {
+    cursor: pointer;
 }
 
 .top {
@@ -185,6 +206,7 @@ h5 {
     top: 9%;
     z-index: 0;
 }
+
 .month {
     position: relative;
     top: -21%;
@@ -209,4 +231,17 @@ h5 {
     text-align: left;
     color: #00131A;
     z-index: 1;
+}
+
+.carousel-titles {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #00131A;
+}
+
+.carousel-titles:hover {
+    cursor: pointer;
 }
