@@ -14,7 +14,7 @@ export default class extends React.Component {
                 visibleSlides={3}
                 totalSlides={milestones.length}
             >
-                <ButtonBack>Back</ButtonBack>
+                <ButtonBack className='back-button'></ButtonBack>
                 <Slider className='slider'>
                     {milestones.map((milestone, idx) => {
                         return (
@@ -24,7 +24,7 @@ export default class extends React.Component {
                         )
                     })}
                 </Slider>
-                <ButtonNext>Next</ButtonNext>
+                <ButtonNext className='next-button'></ButtonNext>
             </CarouselProvider>
 
     );

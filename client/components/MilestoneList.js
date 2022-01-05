@@ -15,9 +15,9 @@ const MilestoneList = (props) => {
             <div id='milestones-list'>
                 {milestones.map((milestone) => {
                 return (
-                    <div className= 'list-item'>
+                    <div key= {milestone.id} className= 'list-item'>
                         <Link to= {`milestones/${milestone.id}`}>
-                            <li key={milestone.id} className='subheading-small'>{milestone.title}</li>
+                            <li className='subheading-small'>{milestone.title}</li>
                         </Link>
                         <p className= 'list-details'><strong>Due Date:</strong> {milestone.dueDate}</p>
                         <br />
@@ -30,9 +30,9 @@ const MilestoneList = (props) => {
             <div id='past-milestones-list'>
                 {pastMilestones.map((milestone) => {
                 return (
-                    <div className= 'list-item'>
+                    <div key= {milestone.id} className= 'list-item'>
                         <Link to= {`milestones/${milestone.id}`}>
-                            <li key={milestone.id} className='subheading-small'>{milestone.title}</li>
+                            <li className='subheading-small'>{milestone.title}</li>
                         </Link>
                         <br />
                     </div>

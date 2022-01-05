@@ -341,4 +341,22 @@ button:hover {
     border: 1px solid #1D2951;
 }
 
+.back-button {
+    background: url(/Icon/Chevron/Left.png);
+}
 
+.next-button {
+    background: url(/Icon/Chevron/Right.png);
+}
+
+.back-button, .next-button {
+    height: 24px;
+    width: 24px;
+    border: none;
+    position: relative;
+    top: 38px;
+}
+
+.back-button:hover, .next-button:hover {
+    border: 1px solid #CEDCE3;
+}
