@@ -21,7 +21,7 @@ https://www.npmjs.com/package/pure-react-carousel
 
 The homepage redirects to /dashboard.
 
-The header component _Header.js_ is purely for show. The user and notification information will be connected to a logged in user, once that functionality is built out.
+The header component _Header.js_ is currently for display only. The user and notifications information will be connected to a logged in user once that functionality is built out.
 
 The views for the milestone list, single view, create, and edit components are only somewhat styled. I chose to focus more on functionality and offer enough styling to get an impression of where these components might wind up, once a designer gives it their touch. 
 
