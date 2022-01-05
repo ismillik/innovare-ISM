@@ -24,10 +24,15 @@ const Dashboard = (props) => {
 };
 
 const mapState = (state) => {
-  const milestones = state.milestones.filter(milestone => milestone.status !== 'Complete') || [];
-  return {
-    milestones: milestones,
-  };
+    const milestones = state.milestones.filter(milestone => milestone.status !== 'Complete') || [];
+    milestones.sort((a,b) => {
+        const dateA = new Date(a.dueDate);
+        const dateB = new Date(b.dueDate);
+        return dateA.getTime() - dateB.getTime();
+    });
+    return {
+        milestones: milestones,
+    };
 };
 
 export default connect(mapState)(Dashboard);

@@ -11,12 +11,12 @@ const Routes = () => {
     return (
         <div>
             <Switch>
-                <Route path="/dashboard" component={Dashboard} />
-                <Route exact path="/milestones" component={MilestoneList} />
-                <Route path="/milestones/create" component={MilestoneCreate} />
-                <Route path="/milestones/edit/:id" component={MilestoneEdit} />
-                <Route path="/milestones/:id" component={MilestoneSingle} />
-                <Redirect to="/dashboard" />  
+                <Route path='/dashboard' component={Dashboard} />
+                <Route exact path='/milestones' component={MilestoneList} />
+                <Route path='/milestones/create' component={MilestoneCreate} />
+                <Route exact path='/milestones/edit/:id' component={MilestoneEdit} />
+                <Route path='/milestones/:id' component={MilestoneSingle} />
+                <Redirect to='/dashboard' />  
             </Switch>
    
         </div>

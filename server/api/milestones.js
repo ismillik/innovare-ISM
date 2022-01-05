@@ -25,24 +25,24 @@ router.post('/', async (req, res, next) => {
 });
 
 //Delete milestone
-// router.delete("/:id", async (req, res, next) => {
-//   try {
-//     const milestone = await Milestone.findByPk(req.params.id);
-//     await milestone.destroy();
-//     res.sendStatus(202);
-//   } catch (err) {
-//     next(err);
-//   }
-// });
+router.delete('/:id', async (req, res, next) => {
+  try {
+    const milestone = await Milestone.findByPk(req.params.id);
+    await milestone.destroy();
+    res.sendStatus(202);
+  } catch (err) {
+    next(err);
+  }
+});
 
 //Update milestone
-// router.put("/:id", async (req, res, next) => {
-//   try {
-//     const milestone = await Milestone.findByPk(req.params.id);
-//     res.send(await milestone.update(req.body));
-//   } catch (err) {
-//     next(err);
-//   }
-// });
+router.put('/:id', async (req, res, next) => {
+  try {
+    const milestone = await Milestone.findByPk(req.params.id);
+    res.send(await milestone.update(req.body));
+  } catch (err) {
+    next(err);
+  }
+});
 
 module.exports = router;

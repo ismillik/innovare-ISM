@@ -34,7 +34,7 @@ export const deleteMilestone = (milestone, history) => {
     return async (dispatch) => {
         await axios.delete(`/api/milestones/${milestone.id}`);
         dispatch(_deleteMilestone(milestone));
-        // history.push('/milestones');
+        history.push('/milestones');
     };
 };
 
@@ -42,7 +42,7 @@ export const updateMilestone = (milestone, history) => {
     return async (dispatch) => {
         const { data: updated } = await axios.put(`/api/milestones/${milestone.id}`, milestone);
         dispatch(_updateMilestone(updated));
-        // history.push(`/milestones/${milestone.id}`)
+        history.push(`/milestones/${milestone.id}`)
     };
 };
 

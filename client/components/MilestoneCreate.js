@@ -42,15 +42,15 @@ class MilestoneCreate extends React.Component {
 
         return (
             <div className='content-wrapper'>
-                <h4>New Milestone</h4>
-                <div className= 'create-form'>
-                    <form onSubmit= {handleSubmit}>
+                <h4 className='subheading-medium'>New Milestone</h4>
+                <div className= 'milestone-form-outer'>
+                    <form className= 'milestone-form' onSubmit= {handleSubmit}>
                         <label htmlFor='title'>Title</label>
                         <input name='title' onChange={handleChange} value={title} required/>
-                        
+                        <br />
                         <label htmlFor='dueDate'>Due Date</label>
                         <input type='date' name='dueDate' onChange={handleChange} value={dueDate} required/>
-                        
+                        <br />
                         <select value={userId} name='userId' onChange={handleChange} required>
                             <option disabled key='0' value='0'>
                                 {' '}-- Assigned To --{' '}
@@ -62,7 +62,7 @@ class MilestoneCreate extends React.Component {
                                 )
                             })}
                         </select>
-
+                        <br />
                         <select value={status} name='status' onChange={handleChange} required>
                             <option disabled key='0' value='0'>
                                 {' '}-- Status --{' '}
@@ -70,12 +70,12 @@ class MilestoneCreate extends React.Component {
                             <option value='In progress'>In progress</option>
                             <option value='Complete'>Complete</option>
                         </select>
-                        
+                        <br />
                         <label htmlFor='details'>Details</label>
                         <input name='details' onChange={handleChange} value={details} />
                         <br />
-                        <button type="submit">Create</button>
-                        <button className="cancel-button" type="button" onClick={handleCancel}>
+                        <button type='submit'>Create</button>
+                        <button className='cancel-button' type='button' onClick={handleCancel}>
                             Cancel
                         </button>
                     </form>

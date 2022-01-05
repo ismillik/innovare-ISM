@@ -1,39 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MilestoneList = (props) => {
-    const { milestones, pastMilestones } = props;
-    const history = useHistory();
+    const { milestones, pastMilestones, history } = props;
     const handleClick = () => history.push('/milestones/create');
     return (
         <div className='content-wrapper'>
-            <h4>Milestones</h4>
-            <hr />
-            <div className= 'button'>
+            <div className= 'list-title'>
+                <h4 className='subheading-medium'>Current Milestones</h4>
                 <button onClick= {handleClick}> Create New Milestone</button>
-            </div>
-            <div id= 'milestones-list-titles'>
-                <h5>Milestone</h5>
-                <h5>Deadline</h5>
-                <h5>Assigned To</h5>
             </div>
             <hr/>  
             <div id='milestones-list'>
                 {milestones.map((milestone) => {
                 return (
-                    // <MilestoneListItem milestone= {milestone} key= {milestone.id}/>
-                    <li key={milestone.id}>{milestone.title}</li>
+                    <div className= 'list-item'>
+                        <Link to= {`milestones/${milestone.id}`}>
+                            <li key={milestone.id} className='subheading-small'>{milestone.title}</li>
+                        </Link>
+                        <p className= 'list-details'><strong>Due Date:</strong> {milestone.dueDate}</p>
+                        <br />
+                    </div>
                 )
                 })}
             </div>  
-            <h4>Completed Milestones</h4>
+            <h4 className='subheading-medium'>Completed Milestones</h4>
             <hr />
             <div id='past-milestones-list'>
                 {pastMilestones.map((milestone) => {
                 return (
-                    // <MilestoneListItem milestone= {milestone} key= {milestone.id}/>
-                    <li key={milestone.id}>{milestone.title}</li>
+                    <div className= 'list-item'>
+                        <Link to= {`milestones/${milestone.id}`}>
+                            <li key={milestone.id} className='subheading-small'>{milestone.title}</li>
+                        </Link>
+                        <br />
+                    </div>
                 )
                 })}
             </div>  
