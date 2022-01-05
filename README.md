@@ -13,9 +13,10 @@ https://www.npmjs.com/package/pure-react-carousel
 
 1. `npm install`
 2. `createdb innovare-ism`
-3. `npm run start:dev`
-4. navigate to http://localhost:3000 in your browser
-5. browse the site!
+3. `npm run seed`
+4. `npm run start:dev`
+5. navigate to http://localhost:3000 in your browser
+6. browse the site!
 
 ## Notes:
 
